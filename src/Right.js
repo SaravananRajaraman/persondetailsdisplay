@@ -1,18 +1,17 @@
 import React from 'react';
 import './App.css';
 
-class Right extends React.Component
+/*Note: Receives data from "Left" component and displays details of the person (in table) which is clicked
+ on the left side*/
+function Right(props)
 {
-
-	render()
-	{
-		const {selectedPerson} = this.props;
-		return(<div  className="right">
-			<div>Height: {selectedPerson.height}</div>
-			<div>Color: {selectedPerson.eye_color}</div>
-			<div>Birth_Year: {selectedPerson.birth_year}</div>
-			<div>Gender: {selectedPerson.gender}</div>
-			</div>)
-	}
+	return(<table>
+		<tr><td>Height</td><td>{props.selectedPerson.height}</td></tr>
+		<tr><td>Color</td><td>{props.selectedPerson.eye_color}</td></tr>
+		<tr><td>Birth_Year</td><td>{props.selectedPerson.birth_year}</td></tr>
+		<tr><td>Gender</td><td>{props.selectedPerson.gender}</td></tr>
+	</table>)
 }
 export default Right;
+
+

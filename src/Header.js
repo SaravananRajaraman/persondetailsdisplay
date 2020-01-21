@@ -1,15 +1,12 @@
 import React from 'react';
+import {HeaderItem} from './StyledComponents';
 
-import './App.css';
-
-class Header extends React.Component
+/*Note: Displays Selected person name in Header which is received from "Left* component*/
+function Header(props)
 {
-	render()
-	{
-		return(<div>
-			<div className="headerItem">{this.props.selectedName}</div>
-		</div>)
-	}
+	return(<div>
+		<HeaderItem>{props.selectedName}</HeaderItem>
+	</div>)
 }
 
 export default Header;	
